@@ -3,22 +3,28 @@ using UnityEngine.InputSystem;
 
 public class AirplaneFlightPhysicsSimulation : MonoBehaviour
 {
+    [Header("Engine")]
+    public float thrust = 40;
+
+    [Header("Aerodynamics")]
+    public float liftCoefficient = 0.02f;
+    public float dragCoefficient = 0.02f;
+    public float sideDrag = 2f;
+
+    [Header("BANK TURN")]
+    public float turnStrength = 0.5f;
+
+    [Header("STALL")]
+    public float stallAngle = 35f;
+    public float stallLiftMultiplier = 0.3f;
+
+    [Header("Control")]
+    public float pitchPower = 15f;
+    public float rollPower = 20f;
+    public float yawPower = 15f;
+
     Rigidbody rb;
-
-    public float thrust;
-    public float liftCoefficient;
-    public float stallAngle;
-    public float stallLiftMultiplier;
-
-    public float dragCoefficient;
-    public float sideDrag;
-
-    public float pitchPower;
-    public float rollPower;
-    public float yawPower;
-    public float turnStrength;
-
-    private bool engineOn;
+    private bool engineOn = false;
 
     void Start()
     {

@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class AirplaneFlightPhysicsSimulation : MonoBehaviour
 {
-    public Rigidbody rb;
+    Rigidbody rb;
 
     public float thrust;
     public float liftCoefficient;

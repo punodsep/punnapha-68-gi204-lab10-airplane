@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -398,6 +399,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c522537a78fd246804881e947bab7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  target: {fileID: 1067922131}
+  offset: {x: 0, y: 3, z: -8}
+  smoothSpeed: 5
 --- !u!1 &1067922128
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,9 +480,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 2.0744941
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.0060726404}
 --- !u!4 &1067922131
 Transform:
   m_ObjectHideFlags: 0
@@ -497,7 +513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d09f060e0c8514ca273b497ccd810b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AirplaneFlightPhysicsSimulation
-  rb: {fileID: 0}
   thrust: 0
   liftCoefficient: 0
   stallAngle: 0
